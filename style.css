@@ -1,0 +1,402 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.container {
+    width: 100%; /* Full width for the container */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between company name and nav */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Adds some padding */
+    background-color: red; /* Optional background color */
+}
+
+nav ul {
+    list-style-type: none; /* Removes bullet points */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Aligns list items in a row */
+}
+
+nav ul li {
+    margin-left: 20px; /* Adds space between nav items */
+    font-size: 18px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Default link color */
+}
+
+nav ul li a:hover {
+    color: yellow; /* Change link color on hover */
+}
+
+h1 {
+    color: #2980b9; /* Bright blue */
+    text-align: center;
+}
+
+h2 {
+    color: #27ae60; /* Bright green */
+    text-align: center;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    background-color: #f1c40f; /* Bright yellow */
+    color: #000000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background-color: #e67e22; /* Orange on hover */
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.video-item {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #8e44ad; /* Purple */
+}
+
+.video-item h3 {
+    color: #ffffff; /* White text for video titles */
+}
+
+#contact {
+    background-color:blue; /* Dark blue-gray */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 1%;
+}
+
+#text_1
+{
+    display: auto; /* Allows the animation to work properly */
+    opacity: 0; /* Start invisible */
+    transform: translateX(-100%); /* Start from the left */
+    animation: slideIn 3s forwards; /* Animation name, duration, and forwards to maintain final state */
+    font-size: 17.5px;
+}
+
+#text_2
+{
+    display: auto; /* Allows the animation to work properly */
+    opacity: 0; /* Start invisible */
+    transform: translateX(100%); /* Start from the left */
+    animation: slideIn 3s forwards; /* Animation name, duration, and forwards to maintain final state */
+    font-size: 17.5px;
+
+}
+#about {
+    text-align: center;
+    margin: 20px;
+}
+
+.about-box {
+    background-color: black; /* White background for the box */
+    border: 2px solid yellow; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Space inside the box */
+    margin: 20px auto; /* Centering the box with margin */
+    max-width: 800px; /* Maximum width for larger screens */
+    box-shadow: 10px 10px 10px rgb(red, green, blue) /* Subtle shadow for depth */
+}
+
+.animated-text {
+    display: inline-block; /* Allows the animation to work properly */
+    opacity: 0; /* Start invisible */
+    transform: translateX(-100%); /* Start from the left */
+    animation: slideIn 3s forwards; /* Animation name, duration, and forwards to maintain final state */
+    font-size: 18.5px;
+    color: red;
+}
+
+.Heading_1
+{
+    display: auto; /* Allows the animation to work properly */
+    opacity: 0; /* Start invisible */
+    transform: translateX(100%); /* Start from the right */
+    animation: slideIn 1.5s forwards; /* Animation name, duration, and forwards to maintain final state */
+    font-size: 25px; 
+}
+
+.Heading_2
+{
+    display: auto; /* Allows the animation to work properly */
+    opacity: 0; /* Start invisible */
+    transform: translateY(100%); /* Start from the right */
+    animation: slideIn 2s forwards; /* Animation name, duration, and forwards to maintain final state */
+    font-size: 25px;
+}
+
+
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+.hidden {
+    display: auto; /* Hides elements with this class */
+}
+
+.company-name {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.company-name:hover {
+    color: yellow; /* Changes color to yellow on hover */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+body.inverted {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+body.inverted footer {
+    background-color: #ffffff; /* White background for inverted theme */
+    color: #000000; /* Black text for inverted theme */
+}
+
+body.inverted footer p
+{
+    color: black;
+    font-size:bold;
+}
+
+header.inverted {
+    background-color: #000;
+    border: 2px solid yellow; /* Black background for header */
+}
+
+header.inverted nav ul li a {
+    color: red; /* Red text for links in inverted mode */
+}
+
+h1.inverted, h2.inverted {
+    color: #fff; /* White text for headings in inverted mode */
+}
+
+header.inverted nav ul li a:hover {
+    color: yellow; /* Red text for links in inverted mode */
+}
+
+.video-item.inverted {
+    background-color: #fff; /* White background for video items */
+    color: #000; /* Black text for video items */
+}
+
+body.inverted .video-item h3 {
+    color: #000000; /* Black color for video titles in inverted theme */
+}
+
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px; /* Width of the switch */
+    height: 34px; /* Height of the switch */
+}
+
+.switch input {
+    opacity: 0; /* Hide default checkbox */
+    width: 0; /* Hide default checkbox */
+    height: 0; /* Hide default checkbox */
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Background color when off */
+    transition: .4s; /* Transition effect */
+    border-radius: 34px; /* Rounded corners */
+}
+
+.slider::before {
+    position: absolute;
+    content: ""; 
+    height: 26px; /* Height of the slider knob */
+    width: 26px; /* Width of the slider knob */
+    left: 4px; 
+    bottom: 4px; 
+    background-color: black; /* Knob color */
+    transition: .4s; /* Transition effect for knob movement */
+    border-radius: 50%; /* Round knob */
+}
+
+/* Change background color when checked */
+input:checked + .slider {
+   background-color: white; /* Background color when on */
+}
+
+/* Move the slider knob when checked */
+input:checked + .slider::before {
+   transform : translateX(26px); /* Move knob to the right */
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        width: 100%; /* Full width for mobile navigation */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    nav ul li {
+        margin-left: 0; /* Remove left margin for mobile view */
+        margin-bottom: 10px; /* Add space between items */
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .video-item {
+        width: 100%; /* Full width for video items on small screens */
+        margin-bottom: 20px; /* Add space between video items */
+    }
+
+    .video-gallery {
+        display: block; /* Stack video items vertically on small screens */
+    }
+
+    body.inverted {
+        background-color: #000; /* Black background */
+        color: #fff; /* White text */
+    }
+    
+    header.inverted {
+        background-color: #000; /* Black background for header */
+    }
+    
+    header.inverted nav ul li a {
+        color: red; /* Red text for links in inverted mode */
+    }
+    
+    h1.inverted, h2.inverted {
+        color: #fff; /* White text for headings in inverted mode */
+    }
+    
+    .video-item.inverted {
+        background-color: #fff; /* White background for video items */
+        color: #000; /* Black text for video items */
+    }
+    
+    body.inverted .video-item h3 {
+        color: #000000; /* Black color for video titles in inverted theme */
+    }
+
+    .about-box {
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin: 10px; /* Adjust margin for smaller screens */
+    }
+
+    footer {
+        background-color:blue; /* Dark blue-gray */
+        color: #ffffff; /* White text */
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    #text_1
+    {
+        display: auto; /* Allows the animation to work properly */
+        opacity: 0; /* Start invisible */
+        transform: translateX(-100%); /* Start from the left */
+        animation: slideIn 3s forwards; /* Animation name, duration, and forwards to maintain final state */
+        font-size: 17.5px;
+    }
+    
+    #text_2
+    {
+        display: auto; /* Allows the animation to work properly */
+        opacity: 0; /* Start invisible */
+        transform: translateX(100%); /* Start from the left */
+        animation: slideIn 3s forwards; /* Animation name, duration, and forwards to maintain final state */
+        font-size: 17.5px;
+    
+    }
+    
+    /* Toggle Switch Styles */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px; /* Width of the switch */
+        height: 34px; /* Height of the switch */
+    }
+    
+    .switch input {
+        opacity: 0; /* Hide default checkbox */
+        width: 0; /* Hide default checkbox */
+        height: 0; /* Hide default checkbox */
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc; /* Background color when off */
+        transition: .4s; /* Transition effect */
+        border-radius: 34px; /* Rounded corners */
+    }
+    
+    .slider::before {
+        position: absolute;
+        content: ""; 
+        height: 26px; /* Height of the slider knob */
+        width: 26px; /* Width of the slider knob */
+        left: 4px; 
+        bottom: 4px; 
+        background-color: black; /* Knob color */
+        transition: .4s; /* Transition effect for knob movement */
+        border-radius: 50%; /* Round knob */
+    }
+    
+    /* Change background color when checked */
+    input:checked + .slider {
+       background-color: white; /* Background color when on */
+    }
+    
+    /* Move the slider knob when checked */
+    input:checked + .slider::before {
+       transform : translateX(26px); /* Move knob to the right */
+    }
+}

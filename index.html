@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editkaro Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="company-name">EditKaro</div> <!-- Company Name -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Toggle Switch -->
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span> <!-- Slider element -->
+        </label>
+    </header>
+
+    <div class="container"> <!-- Added container for centering -->
+        <section id="about" class="about-box">
+            <h2 class="Heading_1">About Editkaro</h2>
+            <p class="animated-text">Editkaro started its journey in 2023, providing top-notch video editing and social media marketing services. Our goal is to help brands and individuals create stunning visual content that captures attention and drives engagement.</p>
+        </section>
+    </div>
+
+    <section id="portfolio">
+        <h2 class="Heading_2">Our Work</h2>
+        <div class="filter-buttons">
+            <button onclick="filterVideos('all')">All</button>
+            <button class="hidden" onclick="filterVideos('short')">Short Form Videos</button>
+            <button class="hidden" onclick="filterVideos('long')">Long Form Videos</button>
+            <button class="hidden" onclick="filterVideos('gaming')">Gaming Videos</button>
+            <button class="hidden" onclick="filterVideos('football')">Football Edits</button> <!-- New Button -->
+            <button class="hidden" onclick="filterVideos('ads')">Ads</button> <!-- New Button -->
+            <button class="hidden" onclick="filterVideos('anime')">Anime Videos</button> <!-- New Button -->
+        </div>
+        <div class="video-gallery" id="videoGallery"></div>
+    </section>
+
+    <footer id="contact">
+        <p id ="text_1">Contact us at info@editkaro.in</p>
+        <p id="text_2">&copy; 2024 EditKaro. All rights reserved.</p> <!-- Added copyright line -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
